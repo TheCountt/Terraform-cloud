@@ -1,14 +1,26 @@
-variable "region" {}
+variable "region" {
+ default = "us-west-1"
+}
 
-variable "vpc_cidr" {}
+variable "vpc_cidr" {
+ default = "172.16.0.0/16" 
+}
 
-variable "enable_dns_support" {}
+variable "enable_dns_support" {
+ default = "true"
+}
 
-variable "enable_dns_hostnames" {}
+variable "enable_dns_hostnames" {
+ default = "true"
+}
 
-variable "enable_classiclink" {}
+variable "enable_classiclink" {
+ default = "false"
+}
 
-variable "enable_classiclink_dns_support" {}
+variable "enable_classiclink_dns_support" {
+ default = "false"
+}
 
 variable "additional_tags" {
   default     = {}
@@ -20,11 +32,17 @@ variable "environment" {
   default = {}
 }
 
-variable "ami" {}
+variable "ami" {
+ default = "ami-054965c6cd7c6e462"
+}
 
-variable "instance_type" {}
+variable "instance_type" {
+ default = "t2.micro"
+}
 
-variable "account_no" {}
+variable "account_no" {
+ default = "247983667897"
+}
 
 variable "kms_arn" {
   type        = string
