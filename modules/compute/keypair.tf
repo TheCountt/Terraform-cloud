@@ -1,4 +1,4 @@
 resource "aws_key_pair" "terraform-key" {
   key_name   = "terraform-key"
-  public_key = file("C:/Users/user/.ssh/id_rsa.pub")
+  public_key = file("ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDiJ0Ss9JQ9ey8V0x/Fnogg1IPHmteYSqa0jRe+KuFciNRbeeJhd1ZU8mprZfP9eDpwgkd+J4Meri1ZVYwf2ZNRxFOcfZWO1YE39pJWYBrsiGM6JbyJtUywEWQ3obKkrxKkk4ZuADBqJD6DtreLqLyXYVT/vONabO+EqGVqNMWbkGfPsf3GA5n/mGdS00LnVo6xA9Idqv5WFFCTdGcnzNmbvOF489hPWlJwS0OAKd1mCllJ5nk45bP9ozCITNDlxaFnTbcbJ2ByltuqT8CE6NmyZvRER9I6Xy/DkAuO20XNj4U2rdBTdNDtO5ZfsRb20YGn0yGKeCi0w9o/istfDviB user@DESKTOP-KUH88AJ")
 }
