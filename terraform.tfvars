@@ -14,4 +14,4 @@ ami = "ami-054965c6cd7c6e462"
 
 instance_type = "t2.micro"
 
-account_no = "247983667897"
+account_no = ""
