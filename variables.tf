@@ -41,7 +41,7 @@ variable "instance_type" {
 }
 
 variable "account_no" {
- default = "247983667897"
+ default = ""
 }
 
 variable "kms_arn" {
