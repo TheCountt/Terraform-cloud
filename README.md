@@ -79,15 +79,21 @@
   - Create a new release
   - Click "Create a new release", and add 1.0.0 to the tag version field, and set the Release title to anything you like.
   - Click "Publish release"
+
+![{7AD3A1AB-B7FE-44E9-949B-9AF8965590CC} png](https://user-images.githubusercontent.com/76074379/132107006-d23c3313-a300-4d62-9f5e-14e84d808a9a.jpg)
+
 - Import the module into your private repository
   - On your Terraform cloud, click Registry on the top pane
-  - You'll need to add a VCS provider. Select GitHub (Custom) when prompted ![](imgs/oauth-terr.png) ![](imgs/git-oauth.png)
+  - You'll need to add a VCS provider. Select GitHub (Custom) when prompted
   - Follow the outlined steps 
   - Click connect and continue 
+
+![Inked{B75F92F8-8A4B-419E-B368-2AC2E4A89345} png_LI](https://user-images.githubusercontent.com/76074379/132107117-1d57d5d9-8bc7-4cc9-97dd-03f7e6d57798.jpg)
+
   - Go back to Registry
   - Click "Public private module"
   - Click the VCS you configured and find the name of your module repo
-  - Select the module and click the "Publish module" button ![](imgs/add-module.png)
+  - Select the module and click the "Publish module" button
   - Copy the configuration details, you'll need it later for when you want to use the module
 - Create a configuration that uses the module
   - Create a new repo (e.g **test-registry**)
@@ -106,14 +112,16 @@
     region = var.region
   }
 
-  module "prj19" {
-    source  = "app.terraform.io/ATech/prj19/aws"
+  module "s3-webapp" {
+    source  = "app.terraform.io/Darey-PBL/aws"
     name   = var.name
     region = var.region
     prefix = var.prefix
     version = "1.0.0"
   }
   ```
+  ![{3DA80531-0AB9-404F-902B-2CFB7BADB882} png](https://user-images.githubusercontent.com/76074379/132107226-0824d01d-8782-4a00-b372-c5e6a2aba978.jpg)
+  
   replace the **module** block with the configuration details you copied earlier.
   - In your variables.tf file, add the following
   ```
@@ -129,12 +137,11 @@
     description = "Your name to attach to the webapp address"
   }
   ```
-  - Add the following to outputs.tf file
-  ```
-  output "website_endpoint" {
-    value = module.prj19.endpoint
-  }
-  ```
+  ![{3DA80531-0AB9-404F-902B-2CFB7BADB882} png](https://user-images.githubusercontent.com/76074379/132107226-0824d01d-8782-4a00-b372-c5e6a2aba978.jpg)
+  
+Configure the variable in the cloud
+
+
   Replace **prj19** with the name of the module block in the **main.tf** file.
 - Create a workspace for the repo like we did above
   - Configure your environment variables
