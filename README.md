@@ -35,7 +35,9 @@
 - Configure 3 branches in your terraform repo for dev, test and prod
 - Make necessary configurations to trigger runs automatically only for **dev** environment.
   - Create a new workspace, select "version control workflow"
-  - Select "GitHub" as version control provider ![](imgs/git-auth.png)
+  - Select "GitHub" as version control provider
+![{1E25EF58-0C5D-4CAE-B2A2-F474E0E81D2B} png](https://user-images.githubusercontent.com/76074379/132105912-2ff48417-0a6d-46c6-9670-b74819b6c90b.jpg)
+
   - Choose the repo that contains your tf files
   - Enter the workspace name (e.g terraform-cloud-dev)
   - Click Advanced options, under VCS branch, enter the branch you want to configure (e.g dev) ![](imgs/branch.png)
@@ -50,7 +52,9 @@
   - Enter a name for the notification
   - Select notfication recipients
   - Under Triggers, click the "Only certain events" radio button
-  - Check the boxes you want to be notfied for. ![](imgs/notif.png)
+  - Check the boxes you want to be notfied for
+
+![{42D15FCE-73EF-442C-96CF-DC0DA112F43C} png](https://user-images.githubusercontent.com/76074379/132106226-b5366b95-a26d-428f-a3f1-290e65dc596c.jpg)
   - To configure Slack notification, choose Slack instead of Email
   - See how to get your Slack webhook here: https://api.slack.com/messaging/webhooks#create_a_webhook
   - Then configure everything else as with Email configuration
