@@ -40,9 +40,15 @@
 
   - Choose the repo that contains your tf files
   - Enter the workspace name (e.g terraform-cloud-dev)
-  - Click Advanced options, under VCS branch, enter the branch you want to configure (e.g dev) ![](imgs/branch.png)
+  - Click Advanced options, under VCS branch, enter the branch you want to configure (e.g dev)
   - Click Create Workspace
-  - Configure your variables as above
+
+![{8823D0FA-820C-4C9D-85A7-C49C205805A2} png](https://user-images.githubusercontent.com/76074379/132106464-1cb6d9fd-07cb-4da3-9810-e62f4dd5602a.jpg)
+
+  - Configure your variables
+
+![{23356B2F-5A66-41A8-966A-9A7C9F39F54B} png](https://user-images.githubusercontent.com/76074379/132106515-8719c118-46ce-4d62-949f-4d6ef8a20a6f.jpg)
+
   - Click the Settings drop down, beside Variables
   - Click Run Triggers
   - Select the workspace you created previously
