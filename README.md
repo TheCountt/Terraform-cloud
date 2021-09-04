@@ -1,5 +1,11 @@
 # Terraform Cloud
 
+ Terraform Cloud is a managed service that provides you with Terraform CLI to provision infrastructure, either on demand or in response to various events.
+
+By default, Terraform CLI performs operation on the server whene it is invoked, it is perfectly fine if you have a dedicated role who can launch it, but if you have a team who works with Terraform – you need a consistent remote environment with remote workflow and shared state to run Terraform commands.
+
+Terraform Cloud executes Terraform commands on disposable virtual machines, this remote execution is also called remote operations.
+
 ## Migrate Terraform files to Terraform Cloud
 -  Create a Terraform Cloud account from this link https://app.terraform.io/signup/account
 - Create an Organization. Click "Start from Scratch", enter a name and click create.
