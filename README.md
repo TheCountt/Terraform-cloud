@@ -14,6 +14,9 @@ Terraform Cloud executes Terraform commands on disposable virtual machines, this
   - Push the files from the previous projects to the repo
   - On Terraform Cloud, click create workspace
   - Select "version control workflow"
+
+![{3221FEAE-65E8-46FF-B4EC-D6270C715623} png](https://user-images.githubusercontent.com/76074379/132108591-e8b10df6-bf44-4fb8-83c7-153e35af2041.jpg)
+
   - Add the newly created repo
   - Provide a description for your workspace and click "Create workspace"
   
