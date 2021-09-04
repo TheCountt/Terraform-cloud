@@ -69,6 +69,8 @@
   - Under Manually destroy, click "Queue destroy plan"
   - Enter the workspace name and click "Queue destroy plan"
 
+![{BD4E99F1-5DEA-41FC-A465-97E5EABF5D33} png](https://user-images.githubusercontent.com/76074379/132106665-0b67d920-2511-4ada-b6bd-739f45657088.jpg)
+
 ## Practice Task 2
 - Create a simple Terraform repository that will be your module
   - Clone from this repo https://github.com/hashicorp/learn-private-module-aws-s3-webapp
