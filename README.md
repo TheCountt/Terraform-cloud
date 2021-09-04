@@ -2,21 +2,32 @@
 
 ## Migrate Terraform files to Terraform Cloud
 -  Create a Terraform Cloud account from this link https://app.terraform.io/signup/account
-- Create an Organization. Click "Start from Scratch", enter a name and click create.![](imgs/org.png)
+- Create an Organization. Click "Start from Scratch", enter a name and click create.
 - Create a workspace.
   - Create a new GitHub repo that will contain your tf configuration
   - Push the files from the previous projects to the repo
   - On Terraform Cloud, click create workspace
   - Select "version control workflow"
   - Add the newly created repo
-  - Provide a description for your workspace and click "Create workspace" ![](imgs/workspace.png)
+  - Provide a description for your workspace and click "Create workspace"
+  
+  ![{41E5698F-CC07-41C2-923F-D9D9827EA6CF} png](https://user-images.githubusercontent.com/76074379/132105461-ff101bf8-4dd7-4bfa-89cf-39b8b2d865c5.jpg)
+  
 - Configure variables
   - Click Variables from the top tab in your workspace, under the workspace name
-  - Scroll down to Environment Variables and create variables for your access key id and secret access key you got from AWS. ![](imgs/env.png)
+  - Scroll down to Environment Variables and create variables for your access key id and secret access key you got from AWS.
+  
+  ![{089F0B80-1BA9-4163-987F-BA17B7AB025C} png](https://user-images.githubusercontent.com/76074379/132105503-dbdb84d5-6fec-4866-b3cb-ce7889ce7d22.jpg)
+  
 - Run **plan** and **apply** from console
   - Click on the Runs tab
   - Click "Queue plan"
-  - After the **plan** run is complete, click "Confirm and apply". Enter a comment and click "Confirm plan" to apply the configuration. ![](imgs/run1.png)
+  - After the **plan** run is complete, click "Confirm and apply". Enter a comment and click "Confirm plan" to apply the configuration.
+  
+![{30FE31FC-0A18-49C3-B465-2A5F2354BC77} png](https://user-images.githubusercontent.com/76074379/132105581-e959d182-0b4c-4060-a4ec-497a49c51312.jpg)
+
+![{7F9AF193-D0C2-47E7-9E2B-BDC5725BCDBA} png](https://user-images.githubusercontent.com/76074379/132105620-ff7b1cd3-a213-46f5-82b2-f0b70d87e4c5.jpg)
+
 - Test automated **terraform plan** 
   - Edit a file in your repo, and commit. A **plan** run should be triggered automatically.
 
