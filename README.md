@@ -112,7 +112,7 @@
   }
 
   module "s3-webapp" {
-    source  = "app.terraform.io/Darey-PBL/aws"
+    source  = "app.terraform.io/Darey-PBL/s3-webapp/aws"
     name   = var.name
     region = var.region
     prefix = var.prefix
