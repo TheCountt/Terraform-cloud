@@ -166,7 +166,7 @@ Test your deployment by queuing a plan, then confriming and applying the plan in
 ![{074CD6D3-90F4-472D-95AE-9CB8FDC67061} png](https://user-images.githubusercontent.com/76074379/132107757-70919cc7-48d5-466b-a17b-f47a37fdb265.jpg)
 
 
-## Destroy the infratructure
+## Destroy the infrastructure
 
 You will need queue a destroy plan in the Terraform Cloud UI for your workspace, by clicking the "Queue destroy plan" button.
 
