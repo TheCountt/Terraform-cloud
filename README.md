@@ -137,7 +137,6 @@
     description = "Your name to attach to the webapp address"
   }
   ```
-  ![{3DA80531-0AB9-404F-902B-2CFB7BADB882} png](https://user-images.githubusercontent.com/76074379/132107226-0824d01d-8782-4a00-b372-c5e6a2aba978.jpg)
   
 - Terraform Cloud uses the outputs.tf file to display your module outputs as you run them in the web UI.
  ```
