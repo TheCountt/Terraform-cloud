@@ -71,7 +71,7 @@
 
 ![{BD4E99F1-5DEA-41FC-A465-97E5EABF5D33} png](https://user-images.githubusercontent.com/76074379/132106665-0b67d920-2511-4ada-b6bd-739f45657088.jpg)
 
-## Practice Task 2
+## Practice Task 2 https://learn.hashicorp.com/tutorials/terraform/module-private-registry-share
 - Create a simple Terraform repository that will be your module
   - Clone from this repo https://github.com/hashicorp/learn-private-module-aws-s3-webapp
   - Your repo's name should be in the form terraform-\<PROVIDER>-\<NAME>
@@ -96,7 +96,7 @@
   - Select the module and click the "Publish module" button
   - Copy the configuration details, you'll need it later for when you want to use the module
 - Create a configuration that uses the module
-  - Create a new repo (e.g **test-registry**)
+  - you can fork this repo https://github.com/hashicorp/learn-private-module-root/
   - Create main.tf, variables.tf and outputs.tf files
   - In your main.tf file, paste in the following block
   ```
@@ -139,18 +139,37 @@
   ```
   ![{3DA80531-0AB9-404F-902B-2CFB7BADB882} png](https://user-images.githubusercontent.com/76074379/132107226-0824d01d-8782-4a00-b372-c5e6a2aba978.jpg)
   
-Configure the variable in the cloud
+- Terraform Cloud uses the outputs.tf file to display your module outputs as you run them in the web UI.
+ ```
+  output "website_endpoint" {
+  value = module.s3-webapp.endpoint
+}
+```
+## Create a workspace for the configuration
+In Terraform Cloud, create a new workspace and choose your GitHub connection.
+
+Terraform Cloud will display a list of your GitHub repositories. You may need to filter by name to find and choose the your root configuration repository, called learn-private-module-root.
+
+Leave the workspace name and "Advanced options" unchanged, and click the purple "Create workspace" button to create the workspace.
+
+Once your configuration is uploaded successfully, choose "Configure variables."
+
+You will need to add the three Terraform variables prefix, region, and name. These variables correspond to the variables.tf file in your root module configuration and are necessary to create a unique S3 bucket name for your webapp. Add your AWS credentials as two environment variables, AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY and mark them as sensitive.
+
+![{92E2D916-F4D6-4222-93AA-43D58B17D539} png](https://user-images.githubusercontent.com/76074379/132107624-9a62b4d9-02a9-4f72-9db7-b13f559f4261.jpg)
+
+## Deploy the infrastructure
+
+Test your deployment by queuing a plan, then confriming and applying the plan in your Terraform Cloud UI.
+
+![{9123759B-4144-461F-8F83-248FA6AB30B3} png](https://user-images.githubusercontent.com/76074379/132107732-f8ebd9be-aab8-4298-868d-a568eaef3525.jpg)
+
+![{074CD6D3-90F4-472D-95AE-9CB8FDC67061} png](https://user-images.githubusercontent.com/76074379/132107757-70919cc7-48d5-466b-a17b-f47a37fdb265.jpg)
 
 
-  Replace **prj19** with the name of the module block in the **main.tf** file.
-- Create a workspace for the repo like we did above
-  - Configure your environment variables
-  - Configure three Terraform variables that will serve as input to the module based on the names of variables in your **variables.tf** file
-- Deploy the infrastructure
-  - From your workspace's Overview tab
-  - Click Actions (on the right) and click Start new plan ![](imgs/plan-priv.png)
-  - Enter any name you like
-  - After the **plan** run, confirm and apply like above ![](imgs/apply-priv.png)
-  - You should get an output that's URL to a page hosted on an S3 bucket ![](imgs/website.png)
-- Destroy the infrastruture like we did above.
+## Destroy the infratructure
+
+You will need queue a destroy plan in the Terraform Cloud UI for your workspace, by clicking the "Queue destroy plan" button.
+
+![{0C10931F-4CCF-427A-A064-C7B43824251F} png](https://user-images.githubusercontent.com/76074379/132107894-eaaa567d-110e-4fbb-a1ce-3a43033b91a3.jpg)
 
