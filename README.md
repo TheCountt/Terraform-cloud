@@ -42,8 +42,7 @@
   - Enter the workspace name (e.g terraform-cloud-dev)
   - Click Advanced options, under VCS branch, enter the branch you want to configure (e.g dev)
   - Click Create Workspace
-
-![{8823D0FA-820C-4C9D-85A7-C49C205805A2} png](https://user-images.githubusercontent.com/76074379/132106464-1cb6d9fd-07cb-4da3-9810-e62f4dd5602a.jpg)
+![Inked{8823D0FA-820C-4C9D-85A7-C49C205805A2} png_LI](https://user-images.githubusercontent.com/76074379/132108186-0bc7dd7d-4f83-45e5-bd0a-e354b19961dd.jpg)
 
   - Configure your variables
 
